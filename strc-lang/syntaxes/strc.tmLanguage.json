@@ -1,0 +1,100 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Strc",
+	"patterns": [
+	  {
+		"include": "#keywords"
+	  },
+	  {
+		"include": "#storage-types"
+	  },
+	  {
+		"include": "#support-types"
+	  },
+	  {
+		"include": "#classes"
+	  },
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#numbers"
+	  },
+	  {
+		"include": "#imports"
+	  }
+	],
+	"repository": {
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.strc",
+			"match": "\\b(if|while|for|return|func)\\b"
+		  }
+		]
+	  },
+	  "storage-types": {
+		"patterns": [
+		  {
+			"name": "storage.type.strc",
+			"match": "\\b(int|float|double|long)\\b"
+		  }
+		]
+	  },
+	  "support-types": {
+		"patterns": [
+		  {
+			"name": "support.type.vec2.strc",
+			"match": "\\b(vec2)\\b"
+		  },
+		  {
+			"name": "support.type.vec3.strc",
+			"match": "\\b(vec3)\\b"
+		  }
+		]
+	  },
+	  "classes": {
+		"patterns": [
+		  {
+			"name": "entity.name.type.class.strc",
+			"match": "\\b(GameObject)\\b"
+		  }
+		]
+	  },
+	  "numbers": {
+		"patterns": [
+		  {
+			"name": "constant.numeric.integer.strc",
+			"match": "\\b\\d+\\b"
+		  },
+		  {
+			"name": "constant.numeric.float.strc",
+			"match": "\\b\\d*\\.\\d+f?\\b"
+		  }
+		]
+	  },
+	  "strings": {
+		"name": "string.quoted.double.strc",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.strc",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "imports": {
+		"name": "keyword.control.import.strc",
+		"begin": "(-bring)\\b",
+		"end": "\\s+",
+		"patterns": [
+		  {
+			"name": "string.unquoted.import.strc",
+			"match": "[^\\s]+"
+		  }
+		]
+	  }
+	},
+	"scopeName": "source.strc"
+  }

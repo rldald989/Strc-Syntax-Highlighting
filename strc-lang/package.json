@@ -1,0 +1,25 @@
+{
+  "name": "strc-lang",
+  "displayName": "Strc Lang",
+  "description": "string cheese language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "strc",
+      "aliases": ["Strc", "strc"],
+      "extensions": [".strc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "strc",
+      "scopeName": "source.strc",
+      "path": "./syntaxes/strc.tmLanguage.json"
+    }]
+  }
+}
