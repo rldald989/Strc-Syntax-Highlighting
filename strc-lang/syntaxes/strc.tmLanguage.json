@@ -37,7 +37,7 @@
 		"patterns": [
 		  {
 			"name": "storage.type.strc",
-			"match": "\\b(int|float|double|long)\\b"
+			"match": "\\b(int|float|string|double|long|vec2|vec3)\\b"
 		  }
 		]
 	  },
